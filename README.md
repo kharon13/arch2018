@@ -1,5 +1,5 @@
 ###########################################################################
-# Learn ArchLinux Install v0.1b (fork https://github.com/ordanax/arch2018) 
+# Learn ArchLinux Install v0.1b (forked from ordanax/arch2018) 
 ###########################################################################
 
 This script install ArchLinux XFCE + AUR + XFCE config. Also you can add own /home directory as well as XFCE config.
@@ -67,7 +67,7 @@ Our Arch Linux Team https://vk.com/arch4u
 Linux Chat https://t.me/linux4u
 
 # Changelog
-### 27.05.2019 Learn ArchLinux Install v0.1b (fork https://github.com/ordanax/arch2018)
+### 27.05.2019 Learn ArchLinux Install v0.1b (forked from ordanax/arch2018)
 - change script for studying and setting it up for personal needs
 - add new HDD for HOME&SWAP partition mount
 
