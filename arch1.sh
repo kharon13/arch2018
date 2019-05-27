@@ -19,7 +19,7 @@ echo 'Url on checklist - vk.com/arch4u'
 echo '2.3 Sync on system clock'
 timedatectl set-ntp true
 
-#i want GPT
+#MBR use
 echo '2.4 Create Partition on ssd'
 (
   echo o;
@@ -38,8 +38,6 @@ echo '2.4 Create Partition on ssd'
 
   echo w;
 ) | fdisk /dev/sda
-#I do not understand
-#if i do this 
 
 echo 'Create Partition on HDD'
 (
@@ -62,15 +60,15 @@ echo 'Create Partition on HDD'
 ) | fdisk /dev/sdb
 fdisk -l
 
-#Needed change for EFI system
+echo '2.4.2 Disk format & mount'
 
-echo '2.4.2 Disk format'
 mkfs.ext2  /dev/sda1 -L boot
 mkfs.ext4  /dev/sda2 -L root
 mkswap /dev/sdb1 -L swap
 mkfs.ext4  /dev/sdb2 -L home
 
 echo '2.4.3 Disk mount'
+
 mount /dev/sda2 /mnt
 mkdir /mnt/{boot,home}
 mount /dev/sda1 /mnt/boot
@@ -78,6 +76,7 @@ swapon /dev/sdb1
 mount /dev/sdb2 /mnt/home
 
 echo '3.1 Change mirror. Use Yandex mirror'
+
 echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 echo '3.2 Install Base package'
