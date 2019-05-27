@@ -28,13 +28,13 @@ echo '2.4 Create Partition on ssd'
   echo;
   echo;
   echo;
-  echo +100M;
+  echo +200M;
 
   echo n;
+  echo p;
   echo;
-  echo;
-  echo;
-  echo +20G;
+  echo a;
+  echo 1;
 
   echo w;
 ) | fdisk /dev/sda
